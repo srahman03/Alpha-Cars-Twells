@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    
+    <title>AlphaCars | Sign In</title>
+     <!-- font awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logoOnly.png">
+</head>
+<body>
+    <div class="loader"></div>
+    <header id="mainNav">
+        <div id="logo">
+            <a href="index.html">
+            <img src="images/logoOnly.png" alt="Logo" width="130" height="70"> </a>
+            <a href="index.html"><p>ALPHA CARS</p></a>
+        </div>
+        <nav>
+            <div id= "span" class="box">
+                <div class="borderRight"></div>
+                <a href="airport.html">AIRPORT TRANSFERS</a>
+            </div>
+            <div id= "span" class="box">
+                <div class="borderRight"></div>
+                <a href="index.html">TAXI SERVICES</a>
+            </div>
+            <div id= "signin" class="box">
+                <a href="index.html#contactUs">CONTACT US</a>
+            </div>
+            <div id="homeBox" class="box">
+                <a id="signInOutLink" href="#" onclick="toggleSignIn()">SIGN IN</a>
+            </div>
+        </nav>
+
+        <section class=" newMenu">
+            <input id="burger" type="checkbox" />
+    
+            <label for="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+    
+            <div class = "hamburgerMenu">    
+            <ul>
+                <li><a href="airport.html">Airport Transfers</a></li>
+                <li><a href="index.html">Taxi Services</a></li>
+                <li><a href="index.html#contactUs">Contact Us</a></li>
+                <li><a href="#" id="hamburgerSignInOutLink" onclick="toggleSignInHamburger()">Sign In</a></li>
+            </ul>  
+            </div>
+        </section>
+    </header>
+
+
+
+
+    <section class="registerArea">
+    <div class="regContainer" id="regContainer">
+        <div class="form-container sign-up-container">
+            <form id="signupForm">
+                <h1>Create Account</h1>
+                <div class="infield">
+                    <input type="text" placeholder="Full name" id="fullName" required/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email" id="email" required/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="tel" placeholder="Mobile number" pattern="[0-9]{11}" id="mobileNumber" required/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" id="password" required/>
+                    <label></label>
+                </div>
+                <button type="button" onclick="signup()">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="signinForm">
+                <h1>Sign in</h1>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email" id="signinEmail"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" id="signinPassword"/>
+                    <label></label>
+                </div>
+                <a href="#" class="forgot">Forgot your password?</a>
+                <button type="button" onclick="signin()">Sign In</button>
+    
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button>Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button>Sign Up</button>
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+</section>
+
+    <section class = "terms">
+        <small>At Alpha Cars, we employ cookies for analytics, personalization, and essential website functionality. While you have the option to delete or block cookies, please note that some critical website features may be unavailable without them. To gain a comprehensive understanding of our cookie usage, we invite you to peruse our Cookie Policy. Additionally, we recommend reviewing our Terms & Conditions and Privacy Policy before proceeding with your booking at Alpha Cars. You can conveniently locate these important documents in the links provided below.</small>
+
+        
+    </section>
+    <footer>
+        <div class="fWriting">
+            <div class="footerList">
+            <small>
+                <a href="cookiePolicy.html">Cookie Policy</a>
+            </small>
+            <small>
+                <a href="terms&conditions.html">Terms and Conditions</a>
+            </small>
+            <small>
+                <a href="privacyPolicy.html">Privacy Policy</a>
+            </small>
+            </div>
+            <small>
+                © 2023 Alpha Cars LTD. All rights reserved.
+            </small>
+        </div>
+        <div class="fLogo">
+            <img src="images/logoOnly.png" alt="Logo" width="130" height="70">
+        </div>
+
+    </footer>
+     <!--
+    <button id="clearLocalStorageBtn">Clear Local Storage</button>
+
+    <script>
+        // Function to clear local storage
+        function clearLocalStorage() {
+            localStorage.clear();
+            alert('Local storage cleared!');
+        }
+
+        // Attach click event listener to the button
+        document.getElementById('clearLocalStorageBtn').addEventListener('click', clearLocalStorage);
+    </script>
+    js code -->
+    <script>
+        const container = document.getElementById('regContainer');
+        const overlayCon = document.getElementById('overlayCon');
+        const overlayBtn = document.getElementById('overlayBtn');
+        overlayBtn.addEventListener('click', ()=> {
+            container.classList.toggle('right-panel-active');
+            overlayBtn.classList.remove('btnScaled');
+            window.requestAnimationFrame( ()=>{
+                overlayBtn.classList.add('btnScaled');
+
+            })
+    });
+    </script>
+    <script> 
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+  
+      if (loader && loader.parentNode === document.body) {
+        loader.classList.add("loader--hidden");
+  
+        loader.addEventListener("transitionend", () => {
+          setTimeout(() => {
+            loader.remove();
+          }, 100); // Adjust the delay time as needed
+        });
+      }
+    });
+  </script>
+  
+  <script>
+       var signInOutLink = document.getElementById('signInOutLink');
+       var hamburgerSignInOutLink = document.getElementById('hamburgerSignInOutLink');
+       var isAuthenticated = false;
+       var isLoggedOut = false;
+
+       // Check for user on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            var storedUser = JSON.parse(localStorage.getItem('user'));
+            isLoggedOut = JSON.parse(localStorage.getItem('isLoggedOut')) || false;
+            isAuthenticated = storedUser !== null && !isLoggedOut;
+            updateSignInOutLink();
+        });
+
+         function toggleSignIn() {
+            if (isAuthenticated) {
+                // User is signed in, perform sign-out
+                alert('Sign out successful!');
+                isLoggedOut = true;
+            } else {
+                // User is not signed in, perform sign-in
+                console.log('Signin button clicked');
+                isLoggedOut = false;
+            }
+            isAuthenticated = !isLoggedOut;
+            localStorage.setItem('isLoggedOut', JSON.stringify(isLoggedOut));
+            updateSignInOutLink();
+        }
+        
+        function toggleSignInHamburger() {
+            toggleSignIn(); // Reuse the toggleSignIn logic
+        }
+
+        function updateSignInOutLink() {
+            if (isAuthenticated) {
+                signInOutLink.innerHTML = 'SIGN OUT';
+                hamburgerSignInOutLink.innerHTML = 'Sign out';
+            } else {
+                signInOutLink.innerHTML = 'SIGN IN';
+                hamburgerSignInOutLink.innerHTML = 'Sign in';
+            }
+        }
+
+        function signup() {
+            console.log('Signup button clicked');
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var mobileNumber = document.getElementById('mobileNumber').value;
+            var password = document.getElementById('password').value;
+
+            var user = {
+                fullName: fullName,
+                email: email,
+                mobileNumber: mobileNumber,
+                password: password
+            };
+
+            localStorage.setItem('user', JSON.stringify(user));
+
+            // Additional log statements for debugging
+            console.log('User details stored in local storage:');
+            console.log(JSON.parse(localStorage.getItem('user')));
+
+            
+            alert('Account created and signed in successfully!');
+            document.getElementById('fullName').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('mobileNumber').value = '';
+            document.getElementById('password').value = '';
+            isAuthenticated = true;
+            isLoggedOut = false;
+            localStorage.setItem('isLoggedOut', JSON.stringify(isLoggedOut));
+            updateSignInOutLink();
+        }
+
+       function signin() {
+            console.log('Signin button clicked');
+            var signinEmail = document.getElementById('signinEmail').value;
+            var signinPassword = document.getElementById('signinPassword').value;
+
+            var storedUser = JSON.parse(localStorage.getItem('user'));
+
+            console.log('Input Email:', signinEmail);
+            console.log('Input Password:', signinPassword);
+            console.log('Stored User:', storedUser);
+
+            if (storedUser && storedUser.email === signinEmail && storedUser.password === signinPassword) {
+                alert('Sign in successful!');
+                 // Clear input fields
+                document.getElementById('signinEmail').value = '';
+                document.getElementById('signinPassword').value = '';
+                isAuthenticated = true;
+                isLoggedOut = false;
+                localStorage.setItem('isLoggedOut', JSON.stringify(isLoggedOut));
+                updateSignInOutLink();
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        }
+
+    </script>
+
+</body>
+</html>

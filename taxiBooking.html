@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+   
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("jRJ7G-GDn2Dm8NgMs");
+    })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet /">
+    <link rel="shortcut icon" href="images/logoOnly.png">
+    <title>AlphaCars | Taxi Bookings</title>
+</head>
+<body>
+   <div class="loader"></div>
+    <header id="mainNav">
+        <div id="logo">
+            <a href="index.html">
+            <img src="images/logoOnly.png" alt="Logo" width="130" height="70"> </a>
+            <a href="index.html"><p>ALPHA CARS</p></a>
+        </div>
+        <nav>
+            <div id= "span" class="box">
+                <div class="borderRight"></div>
+                <a href="airport.html">AIRPORT TRANSFERS</a>
+            </div>
+            <div id= "span" class="box">
+                <div class="borderRight"></div>
+                <a href="index.html">TAXI SERVICES</a>
+            </div>
+            <div id= "signin" class="box">
+                <a href="index.html#contactUs">CONTACT US</a>
+            </div>
+            <div id="homeBox" class="box">
+                <a href="signIn.html">SIGN IN</a>
+            </div>
+        </nav>
+
+        <section class=" newMenu">
+            <input id="burger" type="checkbox" />
+    
+            <label for="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+    
+            <div class = "hamburgerMenu">    
+            <ul>
+                <li><a href="airport.html">Airport Transfers</a></li>
+                <li><a href="index.html">Taxi Services</a></li>
+                <li><a href="index.html#contactUs">Contact Us</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+            </ul>  
+            </div>
+        </section>
+    </header>
+
+    
+    
+
+    <section class = "regSection">
+        <h3>Taxi Booking - Book Here</h3>
+        <form id="contact-form">
+            <div class="form-first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your name">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="tel" id="number" placeholder="Enter you number" pattern="[0-9]{11}">
+                        </div>
+                    </div>
+
+                <div class="details ID">
+                    <span class="title">Pick Up Address</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>House Name/Door Number</label>
+                            <input type="number" id="houseNumPU" placeholder="Enter house number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Road Name</label>
+                            <input type="text" id="roadPU" placeholder="Enter road name">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Area Pick Up</label>
+                            <select id="areaPickUp">
+                                <option disabled selected>Select Area</option>
+                                <option>TN1</option>
+                                <option>TN2</option>
+                                <option>TN3</option>
+                                <option>TN4</option>
+                                <option>TN9</option>
+                                <option>TN10</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Postcode</label>
+                            <input type="text" id="postcode" placeholder="Enter postcode">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Number of Passengers</label>
+                            <select id="numOfPassengers">
+                                <option disabled selected>Select number</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Pick Up</label>
+                            <input type="date" id="DOPU" placeholder="Enter pick up date">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Time of Pick Up</label>
+                            <input type="time" id="timePU" placeholder="Enter pick up time">
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="details ID">
+                    <span class="title">Drop-Off Address</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>House/Door/Name Number</label>
+                            <input type="number" id="houseNumDO" placeholder="Enter house number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Road Name</label>
+                            <input type="text" id="roadDO" placeholder="Enter road name">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Town/City(optional)</label>
+                            <input type="text" id="town/cityDO" placeholder="Enter town/city">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Postcode</label>
+                            <input type="text" id="postcodeDO" placeholder="Enter postcode">
+                        </div>
+                    </div>
+                </div> 
+                <div class="details ID">
+                    <span class="title">Additional Comments</span>
+
+                    <div class="fields">
+                    <div class="input-field">
+                        <label for="textarea2">Comments(optional)</label>
+                        <textarea id="textarea2" placeholder="Write your comment here"> </textarea>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Accept Terms&Conditions/Privacy Policy</span>
+                 <div class="fields">
+                     <div class="checkbox">
+                     <label>*Terms&Conditions*</label>
+                     <input type="checkbox"  id="checkbox" required>
+                     </div>
+                
+                 </div>
+
+                 <div class="fields">
+                     <div class="checkbox">
+                     <label>*Privacy Policy*</label>
+                     <input type="checkbox" id="checkbox2" required>
+                     </div>
+                 </div>
+               
+                </div>
+                    <div class="buttons">
+                        <button id="submitBtn" class="submit">
+                            <span class="btnText">Enquire for pricing</span>
+                        </button>
+                    </div>
+            </div>
+        </form>
+    </section>
+
+    <section class = "terms">
+        <small>At Alpha Cars, we employ cookies for analytics, personalization, and essential website functionality. While you have the option to delete or block cookies, please note that some critical website features may be unavailable without them. To gain a comprehensive understanding of our cookie usage, we invite you to peruse our Cookie Policy. Additionally, we recommend reviewing our Terms & Conditions and Privacy Policy before proceeding with your booking at Alpha Cars. You can conveniently locate these important documents in the links provided below.</small>
+
+        
+    </section>
+    <footer>
+        <div class="fWriting">
+            <div class="footerList">
+            <small>
+                <a href="cookiePolicy.html">Cookie Policy</a>
+            </small>
+            <small>
+                <a href="terms&conditions.html">Terms and Conditions</a>
+            </small>
+            <small>
+                <a href="privacyPolicy.html">Privacy Policy</a>
+            </small>
+            </div>
+            <small>
+                © 2023 Alpha Cars LTD. All rights reserved.
+            </small>
+        </div>
+        <div class="fLogo">
+            <img src="images/logoOnly.png" alt="Logo" width="130" height="70">
+        </div>
+
+    </footer>
+    
+    <script src="js/taxiBooking.js"></script>
+    <script> 
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+  
+      if (loader && loader.parentNode === document.body) {
+        loader.classList.add("loader--hidden");
+  
+        loader.addEventListener("transitionend", () => {
+          setTimeout(() => {
+            loader.remove();
+          }, 100); // Adjust the delay time as needed
+        });
+      }
+    });
+  </script>
+  
+</body>
+</html>
